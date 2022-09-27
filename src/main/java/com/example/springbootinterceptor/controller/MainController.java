@@ -1,0 +1,16 @@
+package com.example.springbootinterceptor.controller;
+
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@Slf4j
+public class MainController {
+
+    @GetMapping("/")
+    public String execute(){
+        log.info("Start execute method");
+        return "Hello world";
+    }
+}
